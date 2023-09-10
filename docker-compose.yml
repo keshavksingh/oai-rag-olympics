@@ -1,0 +1,32 @@
+version: "3.0"
+services:
+  application:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: oai-olympics-container
+    container_name: oai-olympics-container
+    volumes:
+      - ./:/app/
+    networks:
+      - net
+
+  chroma:
+    image: ghcr.io/chroma-core/chroma:latest
+    volumes:
+      - index_data:/chroma/.chroma/index
+    ports:
+      - 8000:8000
+      - 8080:8080
+    networks:
+      - net
+
+volumes:
+  index_data:
+    driver: local
+  backups:
+    driver: local
+
+networks:
+  net:
+    driver: bridge
