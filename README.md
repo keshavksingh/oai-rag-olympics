@@ -1,5 +1,5 @@
 # oai-rag-olympics
- OpenAI RAG Chatbot for Olympics Data
+ OpenAI RAG Chatbot for Olympics Data leveraging Chromadb (https://pypi.org/project/chromadb/)
 
 ## Local Solution Demonstrating Retrieval Augmented Generation for Contextual Olympics Data
 ![image](https://github.com/keshavksingh/oai-rag-olympics/assets/41631964/7a80c902-38a6-44c2-b782-74026b711056)
